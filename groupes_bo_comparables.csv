@@ -1,26 +1,26 @@
-Base opérationnelle;Groupe;Nom Groupe;Nouveau Score Satisfaction;Taux composite cumulé;est_PDTS;Nombre enquêtes envoyées;Taux répondants cumulé;Nouveau Poids Global;Nombre répondants estimé
-BO Oyonnax;1;Groupe 1 - Haute Performance / Petit Volume;95.0;0.0;0;285;14.04;0.13;40
-BO Roussillon;2;Groupe 2 - Performance Intermédiaire-Haute / Volume Moyen;90.0;6.41;5;1229;13.02;0.99;160
-BO Ambérieu - Belley;2;Groupe 2 - Performance Intermédiaire-Haute / Volume Moyen;88.89;3.24;7;1353;13.97;1.25;189
-BO Annonay;2;Groupe 2 - Performance Intermédiaire-Haute / Volume Moyen;88.07;3.04;5;844;12.91;0.54;109
-BO Valence;2;Groupe 2 - Performance Intermédiaire-Haute / Volume Moyen;85.52;4.04;9;1083;13.39;0.79;145
-BO Décines;2;Groupe 2 - Performance Intermédiaire-Haute / Volume Moyen;84.96;3.08;8;987;13.48;0.69;133
-BO Aubenas-Joyeuse;3;Groupe 3 - Performance Intermédiaire-Haute / Volume Moyen;90.1;1.68;4;1130;16.99;1.3;192
-BO Privas-Le Cheylard;3;Groupe 3 - Performance Intermédiaire-Haute / Volume Moyen;87.86;9.4;7;755;18.54;0.78;140
-BO Crest Die;3;Groupe 3 - Performance Intermédiaire-Haute / Volume Moyen;87.41;2.89;8;922;15.51;0.8;143
-BO Saint Vallier;3;Groupe 3 - Performance Intermédiaire-Haute / Volume Moyen;85.61;4.81;8;817;16.16;0.69;132
-BO Valréas;3;Groupe 3 - Performance Intermédiaire-Haute / Volume Moyen;83.33;11.77;6;571;16.81;0.41;96
-BO Roannais;4;Groupe 4 - Performance Moyenne / Grand Volume;85.31;4.63;16;1411;17.36;1.73;245
-BO Forez;4;Groupe 4 - Performance Moyenne / Grand Volume;85.02;3.93;14;1609;15.35;1.74;247
-BO Montélimar;4;Groupe 4 - Performance Moyenne / Grand Volume;82.91;6.05;11;1251;15.91;1.21;199
-BO l'Arbresle;4;Groupe 4 - Performance Moyenne / Grand Volume;80.0;8.9;11;1126;14.65;0.87;165
-BO Heyrieux;4;Groupe 4 - Performance Moyenne / Grand Volume;78.61;9.13;16;1106;16.91;1.02;187
-BO Romans;4;Groupe 4 - Performance Moyenne / Grand Volume;78.43;14.61;12;990;15.45;0.75;153
-BO Gleize;4;Groupe 4 - Performance Moyenne / Grand Volume;78.39;7.16;16;1324;15.03;1.12;199
-BO Rillieux;5;Groupe 5 - Performance à Renforcer / Petit Volume;78.95;4.44;8;873;10.88;0.37;95
-BO Vénissieux;5;Groupe 5 - Performance à Renforcer / Petit Volume;76.04;12.98;10;785;12.23;0.36;96
-BO Firminy - Saint Bonnet;5;Groupe 5 - Performance à Renforcer / Petit Volume;74.42;8.05;10;566;15.19;0.29;86
-BO Bourg - Montrevel;6;Groupe 6 - Performance à Renforcer / Grand Volume;80.49;10.91;17;1489;13.77;1.21;205
-BO Saint Étienne;6;Groupe 6 - Performance à Renforcer / Grand Volume;77.14;11.47;14;1157;12.1;0.64;140
-BO Givors;6;Groupe 6 - Performance à Renforcer / Grand Volume;73.91;12.85;17;1098;12.57;0.59;138
-BO Oullins;6;Groupe 6 - Performance à Renforcer / Grand Volume;72.14;12.24;17;1064;13.16;0.58;140
+Base opérationnelle;Groupe;Nom Groupe;Nouveau Score Satisfaction;Taux composite cumulé;est_PDTS;PDTS / 2 mois;Nombre enquêtes envoyées;Enquêtes / 2 mois;Taux répondants cumulé;Répondants / 2 mois;Nouveau Poids Global
+BO Oyonnax;1;Groupe A (6 BOs);95.0;0.0;0;0.0;285;48;14.04;7;0.13
+BO Aubenas-Joyeuse;1;Groupe A (6 BOs);90.1;1.68;4;0.7;1130;188;16.99;32;1.3
+BO Privas-Le Cheylard;1;Groupe A (6 BOs);87.86;9.4;7;1.2;755;126;18.54;23;0.78
+BO Crest Die;1;Groupe A (6 BOs);87.41;2.89;8;1.3;922;154;15.51;24;0.8
+BO Saint Vallier;1;Groupe A (6 BOs);85.61;4.81;8;1.3;817;136;16.16;22;0.69
+BO Valréas;1;Groupe A (6 BOs);83.33;11.77;6;1.0;571;95;16.81;16;0.41
+BO Roussillon;2;Groupe B (5 BOs);90.0;6.41;5;0.8;1229;205;13.02;27;0.99
+BO Ambérieu - Belley;2;Groupe B (5 BOs);88.89;3.24;7;1.2;1353;226;13.97;32;1.25
+BO Annonay;2;Groupe B (5 BOs);88.07;3.04;5;0.8;844;141;12.91;18;0.54
+BO Valence;2;Groupe B (5 BOs);85.52;4.04;9;1.5;1083;180;13.39;24;0.79
+BO Décines;2;Groupe B (5 BOs);84.96;3.08;8;1.3;987;164;13.48;22;0.69
+BO Roannais;3;Groupe C (8 BOs);85.31;4.63;16;2.7;1411;235;17.36;41;1.73
+BO Forez;3;Groupe C (8 BOs);85.02;3.93;14;2.3;1609;268;15.35;41;1.74
+BO Montélimar;3;Groupe C (8 BOs);82.91;6.05;11;1.8;1251;208;15.91;33;1.21
+BO Bourg - Montrevel;3;Groupe C (8 BOs);80.49;10.91;17;2.8;1489;248;13.77;34;1.21
+BO l'Arbresle;3;Groupe C (8 BOs);80.0;8.9;11;1.8;1126;188;14.65;28;0.87
+BO Heyrieux;3;Groupe C (8 BOs);78.61;9.13;16;2.7;1106;184;16.91;31;1.02
+BO Romans;3;Groupe C (8 BOs);78.43;14.61;12;2.0;990;165;15.45;26;0.75
+BO Gleize;3;Groupe C (8 BOs);78.39;7.16;16;2.7;1324;221;15.03;33;1.12
+BO Rillieux;4;Groupe D (6 BOs);78.95;4.44;8;1.3;873;146;10.88;16;0.37
+BO Saint Étienne;4;Groupe D (6 BOs);77.14;11.47;14;2.3;1157;193;12.1;23;0.64
+BO Vénissieux;4;Groupe D (6 BOs);76.04;12.98;10;1.7;785;131;12.23;16;0.36
+BO Firminy - Saint Bonnet;4;Groupe D (6 BOs);74.42;8.05;10;1.7;566;94;15.19;14;0.29
+BO Givors;4;Groupe D (6 BOs);73.91;12.85;17;2.8;1098;183;12.57;23;0.59
+BO Oullins;4;Groupe D (6 BOs);72.14;12.24;17;2.8;1064;177;13.16;23;0.58
