@@ -137,42 +137,44 @@ Clustering K-Means sur 4 critères normalisés, avec les volumes annuels 2025 ra
 
 ---
 
-## Système de Score du Challenge — 100 points max
+## Système de Points par Réponse
 
-Le score est conçu pour récompenser la **progression** (pas juste le niveau absolu), ce qui rend le challenge équitable au sein de chaque groupe.
+Chaque réponse d'enquête rapporte ou coûte des points à la BO :
 
-### Barème
-
-| Composante | Points | Calcul |
+| Note | Points | Signification |
 |---|---|---|
-| **1. Progression du Score Satisfaction** | **40 pts** | (Δ Score ÷ Meilleur Δ du groupe) × 40 |
-| **2. Réduction du Taux de PDTS** | **30 pts** | (Δ Taux PDTS ÷ Meilleur Δ du groupe) × 30 |
-| **3. Progression du Taux de Répondants** | **20 pts** | (Δ Taux Rép. ÷ Meilleur Δ du groupe) × 20 |
-| **4. Bonus "Excellence"** | **10 pts** | +5 si Score fin ≥ 90% ; +5 si Taux Rép. fin ≥ 18% |
-| **TOTAL** | **100 pts** | |
+| **4/4** (très satisfait) | **+6 pts** | Fort bonus — c'est l'objectif |
+| **3/4** (satisfait) | **+3 pts** | Contribution positive |
+| **2/4** (peu satisfait) | **-1 pt** | Léger malus — signal d'alerte |
+| **1/4** (insatisfait / PDTS) | **-15 pts** | Malus lourd — un détracteur coûte cher |
 
-### Pourquoi ce barème ?
+### Score d'une BO = Total des points ÷ Nombre de répondants
 
-- **40 pts sur le Score Satisfaction** : c'est l'objectif principal du challenge
-- **30 pts sur les PDTS** : réduire les 1/4 est le levier le plus puissant (double effet : baisse du 1/4 ET hausse relative des 3/4 + 4/4)
-- **20 pts sur le Taux de Répondants** : plus de répondants = plus de 4/4 et 3/4 potentiels
-- **10 pts Bonus** : récompense les BOs qui atteignent un niveau d'excellence absolu
+Ce score moyen par répondant **normalise par le volume** : une BO avec 15 répondants est comparable à une BO avec 45 répondants.
 
-### Points importants
+### Pourquoi ces valeurs ?
 
-- On utilise des **taux** (pas des nombres absolus) pour la composante PDTS, afin que les BOs à petit volume ne soient pas désavantagées
-- Le calcul est **relatif au meilleur du groupe** : la BO qui progresse le plus dans chaque composante obtient le maximum, les autres sont proportionnelles
-- Si une BO régresse sur un axe, elle obtient 0 point sur cette composante (pas de points négatifs)
+- **Un 1/4 coûte 15 pts**, soit l'équivalent de **2,5 réponses 4/4** ou **5 réponses 3/4**. Cela matérialise le coût réel d'un détracteur.
+- Le **2/4 est légèrement négatif** (-1 pt) pour inciter à le convertir en 3/4.
+- Le **ratio 4/4 vs 3/4** (6 vs 3) valorise les très satisfaits sans écraser les satisfaits.
 
-### Exemple de calcul (tiré de la simulation Groupe C)
+### Classement du challenge
 
-| BO | Δ Score | Pts Score (40) | Δ Taux PDTS | Pts PDTS (30) | Δ Taux Rép | Pts Rép (20) | Bonus (10) | **TOTAL** |
-|---|---|---|---|---|---|---|---|---|
-| Heyrieux | +10,6% | **40** | -6,6% | **30** | +2,0% | 13 | 5 | **88,3** |
-| Romans | +10,4% | 39 | -4,7% | 20 | +3,0% | **20** | 5 | **84,9** |
-| Roannais | +5,2% | 20 | -3,8% | 12 | +1,5% | 10 | 10 | **51,8** |
+Le gagnant par groupe est déterminé par un **score challenge sur 100** combinant :
+- **60%** du score moyen /répondant atteint en fin de challenge (niveau final)
+- **40%** de la progression du score moyen /répondant (effort fourni)
 
-→ **BO Heyrieux gagne le Groupe C** avec 88,3 points. Voir la section "Simulation" plus bas pour les résultats complets.
+Cela récompense à la fois le résultat et la progression.
+
+### Exemple concret — Impact selon le volume
+
+| Situation | 15 répondants | 30 répondants | 45 répondants |
+|---|---|---|---|
+| 1 PDTS de moins (1/4 → 3/4) | +1,20 pt/rép | +0,60 pt/rép | +0,40 pt/rép |
+| 1 répondant 4/4 de plus | +0,40 pt/rép | +0,20 pt/rép | +0,13 pt/rép |
+| 1 conversion 2/4 → 3/4 | +0,27 pt/rép | +0,13 pt/rép | +0,09 pt/rép |
+
+Les BOs à petit volume bénéficient mécaniquement d'un fort impact par action, ce qui est compensé par le fait qu'elles ont aussi moins de marge en volume absolu.
 
 ---
 
@@ -212,105 +214,111 @@ Les chiffres annuels 2025 ont été divisés par 6 (challenge 2 mois) ou 12 (cha
 
 ## Simulation du Challenge — Résultats Avant / Après (2 mois)
 
-Simulation réaliste basée sur les volumes de chaque BO. Les hypothèses sont adaptées au profil de chaque BO :
-- Les BOs avec un **faible taux de répondants** ont plus de marge d'amélioration
-- Les BOs avec **beaucoup de PDTS** peuvent en réduire davantage
-- Les BOs **déjà excellentes** ont moins de marge (effet plafond)
+Simulation réaliste avec le **système de points par réponse**, basée sur les volumes de chaque BO.
+
+**Hypothèses** :
 - Le volume d'enquêtes envoyées reste stable (pas sous le contrôle des BOs)
-- Chaque PDTS réduit et chaque nouveau répondant satisfait impacte le score proportionnellement au volume de la BO
-
-### Groupe A — Gagnant : BO Valréas (97,1 pts)
-
-| BO | Enq /2m | Score Avant | Score Après | Δ Score | Tx Rép Avant | Tx Rép Après | PDTS Avant | PDTS Après | **TOTAL** | Rang |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Valréas** | 95 | 83,3 % | 95,3 % | +12,0 % | 16,8 % | 19,8 % | 1 | 0 | **97,1** | **1er** |
-| BO Aubenas-Joyeuse | 188 | 90,1 % | 97,6 % | +7,5 % | 17,0 % | 19,0 % | 1 | 0 | 61,5 | 2e |
-| BO Saint Vallier | 136 | 85,6 % | 93,3 % | +7,7 % | 16,2 % | 17,7 % | 1 | 0 | 61,2 | 3e |
-| BO Crest Die | 154 | 87,4 % | 93,5 % | +6,1 % | 15,5 % | 18,0 % | 1 | 1 | 47,5 | 4e |
-| BO Oyonnax | 48 | 95,0 % | 98,0 % | +3,0 % | 14,0 % | 17,5 % | 0 | 0 | 35,0 | 5e |
-| BO Privas-Le Cheylard | 126 | 87,9 % | 91,3 % | +3,4 % | 18,5 % | 19,5 % | 1 | 1 | 28,8 | 6e |
-
-> Moyenne groupe : Score **88,2% → 94,8%** (+6,6%) | Taux Rép. 16,3% → 18,6% | PDTS 5 → 2
-
-**Pourquoi Valréas gagne** : malgré un petit volume (95 enquêtes /2m), elle progresse de +12% sur le score (max du groupe), élimine tous ses PDTS et gagne +3% de taux de répondants. Le scoring relatif récompense cette progression spectaculaire.
+- Le taux de répondants augmente de +1% à +4% selon les BOs (effort de relance)
+- Les PDTS sont réduits (traitement des causes racines)
+- Quelques 2/4 sont convertis en 3/4
+- Les nouveaux répondants se répartissent avec un biais positif (effet challenge)
+- Les anciens PDTS récupérés se ventilent : ~40% en 4/4, ~40% en 3/4, ~20% en 2/4
 
 ---
 
-### Groupe B — Gagnant : BO Annonay (89,3 pts)
+### Groupe A — Gagnant : BO Valréas (65,6/100)
 
-| BO | Enq /2m | Score Avant | Score Après | Δ Score | Tx Rép Avant | Tx Rép Après | PDTS Avant | PDTS Après | **TOTAL** | Rang |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Annonay** | 141 | 88,1 % | 98,0 % | +9,9 % | 12,9 % | 15,4 % | 1 | 0 | **89,3** | **1er** |
-| BO Valence | 180 | 85,5 % | 94,0 % | +8,5 % | 13,4 % | 14,9 % | 2 | 1 | 72,6 | 2e |
-| BO Roussillon | 205 | 90,0 % | 98,0 % | +8,0 % | 13,0 % | 15,0 % | 1 | 0 | 68,6 | 3e |
-| BO Décines | 164 | 85,0 % | 94,1 % | +9,1 % | 13,5 % | 17,0 % | 1 | 1 | 66,9 | 4e |
-| BO Ambérieu - Belley | 226 | 88,9 % | 95,6 % | +6,7 % | 14,0 % | 17,0 % | 1 | 1 | 51,7 | 5e |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **BO Valréas** | 95 | 7 | 7 | 1 | **1** | 16 | +2,94 | → | 9 | 9 | 1 | **0** | 19 | +4,21 | +1,27 | **65,6** |
+| BO Oyonnax | 48 | 4 | 3 | 0 | 0 | 7 | +4,71 | → | 5 | 3 | 0 | 0 | 8 | +4,88 | +0,16 | 63,3 |
+| BO Saint Vallier | 136 | 11 | 9 | 1 | 1 | 22 | +3,50 | → | 12 | 11 | 1 | 0 | 24 | +4,33 | +0,83 | 57,2 |
+| BO Aubenas-Joyeuse | 188 | 17 | 13 | 1 | 1 | 32 | +3,91 | → | 19 | 15 | 2 | 0 | 36 | +4,36 | +0,45 | 46,2 |
+| BO Privas-Le Cheylard | 126 | 12 | 10 | 0 | 1 | 23 | +3,78 | → | 13 | 11 | 0 | 1 | 25 | +3,84 | +0,06 | 6,7 |
+| BO Crest Die | 154 | 12 | 10 | 1 | 1 | 24 | +3,58 | → | 14 | 12 | 1 | 1 | 28 | +3,71 | +0,13 | 2,3 |
 
-> Moyenne groupe : Score **87,5% → 95,9%** (+8,4%) | Taux Rép. 13,4% → 15,9% | PDTS 6 → 3
+> Total points : +455 → +580 (Δ +125) | PDTS : 5 → 2
 
-**Pourquoi Annonay gagne** : meilleure progression de score (+9,9%), élimine son seul PDTS sur un volume de 22 répondants (impact fort), et progresse de +2,5% sur le taux de répondants.
-
----
-
-### Groupe C — Gagnant : BO Heyrieux (88,3 pts)
-
-| BO | Enq /2m | Score Avant | Score Après | Δ Score | Tx Rép Avant | Tx Rép Après | PDTS Avant | PDTS Après | **TOTAL** | Rang |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Heyrieux** | 184 | 78,6 % | 89,2 % | +10,6 % | 16,9 % | 18,9 % | 3 | 1 | **88,3** | **1er** |
-| BO Romans | 165 | 78,4 % | 88,8 % | +10,4 % | 15,4 % | 18,4 % | 2 | 1 | 84,9 | 2e |
-| BO Bourg - Montrevel | 248 | 80,5 % | 89,4 % | +8,9 % | 13,8 % | 16,3 % | 3 | 2 | 67,1 | 3e |
-| BO Forez | 268 | 85,0 % | 91,8 % | +6,8 % | 15,3 % | 17,4 % | 2 | 1 | 55,9 | 4e |
-| BO Gleize | 221 | 78,4 % | 85,7 % | +7,3 % | 15,0 % | 16,5 % | 3 | 2 | 53,8 | 5e |
-| BO Roannais | 235 | 85,3 % | 90,5 % | +5,2 % | 17,4 % | 18,9 % | 3 | 2 | 51,8 | 6e |
-| BO l'Arbresle | 188 | 80,0 % | 84,9 % | +4,9 % | 14,7 % | 15,7 % | 2 | 1 | 41,5 | 7e |
-| BO Montélimar | 208 | 82,9 % | 88,2 % | +5,3 % | 15,9 % | 16,9 % | 2 | 1 | 40,8 | 8e |
-
-> Moyenne groupe : Score **81,1% → 88,6%** (+7,4%) | Taux Rép. 15,6% → 17,4% | PDTS 20 → 11
-
-**Pourquoi Heyrieux gagne** : meilleure progression de score (+10,6%), réduit fortement ses PDTS (3→1, soit -6,6% en taux), et atteint 18,9% de taux de répondants (+bonus 5 pts). Un effort homogène sur les 3 axes.
+**Pourquoi Valréas gagne** : elle élimine son seul PDTS (économie de 15 pts) et gagne 3 répondants positifs sur un volume de seulement 16→19. L'impact par répondant est énorme (+1,27 pt/rép de progression).
 
 ---
 
-### Groupe D — Gagnant : BO Firminy - Saint Bonnet (82,1 pts)
+### Groupe B — Gagnant : BO Roussillon (91,2/100)
 
-| BO | Enq /2m | Score Avant | Score Après | Δ Score | Tx Rép Avant | Tx Rép Après | PDTS Avant | PDTS Après | **TOTAL** | Rang |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Firminy - St Bonnet** | 94 | 74,4 % | 87,8 % | +13,4 % | 15,2 % | 17,7 % | 2 | 1 | **82,1** | **1er** |
-| BO Vénissieux | 131 | 76,0 % | 89,5 % | +13,5 % | 12,2 % | 15,2 % | 2 | 1 | 81,8 | 2e |
-| BO Rillieux | 146 | 79,0 % | 90,5 % | +11,5 % | 10,9 % | 14,9 % | 1 | 1 | 65,4 | 3e |
-| BO Oullins | 177 | 72,1 % | 82,1 % | +10,0 % | 13,2 % | 15,2 % | 3 | 2 | 59,7 | 4e |
-| BO Givors | 183 | 73,9 % | 82,7 % | +8,8 % | 12,6 % | 14,1 % | 3 | 2 | 52,5 | 5e |
-| BO Saint Étienne | 193 | 77,1 % | 83,4 % | +6,3 % | 12,1 % | 14,1 % | 2 | 2 | 33,3 | 6e |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **BO Roussillon** | 205 | 14 | 11 | 1 | 1 | 27 | +3,74 | → | 16 | 13 | 2 | 0 | 31 | +4,29 | +0,55 | **91,2** |
+| BO Annonay | 141 | 9 | 8 | 0 | 1 | 18 | +3,50 | → | 11 | 9 | 2 | 0 | 22 | +4,14 | +0,64 | 86,8 |
+| BO Valence | 180 | 12 | 11 | 0 | 2 | 25 | +3,00 | → | 13 | 12 | 1 | 1 | 27 | +3,63 | +0,63 | 40,8 |
+| BO Ambérieu - Belley | 226 | 16 | 13 | 2 | 1 | 32 | +3,69 | → | 19 | 17 | 1 | 1 | 38 | +3,92 | +0,23 | 27,4 |
+| BO Décines | 164 | 10 | 9 | 2 | 1 | 22 | +3,18 | → | 13 | 13 | 1 | 1 | 28 | +3,61 | +0,43 | 19,5 |
 
-> Moyenne groupe : Score **75,4% → 86,0%** (+10,6%) | Taux Rép. 12,7% → 15,2% | PDTS 13 → 9
+> Total points : +427 → +572 (Δ +145) | PDTS : 6 → 3
 
-**Pourquoi Firminy gagne** : avec seulement 94 enquêtes /2m, elle progresse de +13,4%, réduit ses PDTS de 2→1 (impact massif sur un petit volume de 14→17 répondants), et gagne +2,5% de taux répondants. Très serré avec Vénissieux (82,1 vs 81,8 pts).
+**Pourquoi Roussillon gagne** : elle combine le meilleur score final (+4,29/rép) et une bonne progression (+0,55). Elle élimine son PDTS et gagne 4 répondants positifs.
+
+---
+
+### Groupe C — Gagnant : BO Heyrieux (84,5/100)
+
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **BO Heyrieux** | 184 | 13 | 14 | 1 | **3** | 31 | +2,39 | → | 16 | 17 | 1 | **1** | 35 | +3,74 | +1,36 | **84,5** |
+| BO Forez | 268 | 19 | 18 | 2 | 2 | 41 | +3,32 | → | 22 | 22 | 1 | 1 | 46 | +3,96 | +0,64 | 68,7 |
+| BO Montélimar | 208 | 15 | 14 | 2 | 2 | 33 | +3,03 | → | 16 | 17 | 1 | 1 | 35 | +3,74 | +0,71 | 56,2 |
+| BO Roannais | 235 | 20 | 18 | 0 | 3 | 41 | +3,15 | → | 22 | 19 | 1 | 2 | 44 | +3,59 | +0,44 | 33,9 |
+| BO Romans | 165 | 11 | 12 | 1 | 2 | 26 | +2,73 | → | 13 | 14 | 2 | 1 | 30 | +3,43 | +0,70 | 33,9 |
+| BO l'Arbresle | 188 | 12 | 13 | 1 | 2 | 28 | +2,86 | → | 12 | 14 | 2 | 1 | 29 | +3,34 | +0,49 | 18,4 |
+| BO Bourg - Montrevel | 248 | 15 | 16 | 0 | 3 | 34 | +2,74 | → | 18 | 18 | 2 | 2 | 40 | +3,25 | +0,51 | 12,9 |
+| BO Gleize | 221 | 14 | 15 | 1 | 3 | 33 | +2,52 | → | 16 | 17 | 2 | 2 | 37 | +3,11 | +0,59 | 6,5 |
+
+> Total points : +766 → +1047 (Δ +281) | PDTS : 20 → 11
+
+**Pourquoi Heyrieux gagne** : elle réduit ses PDTS de 3→1 (gain de 30 pts bruts, soit +0,86/rép rien que sur les PDTS) et gagne 4 répondants positifs. Progression la plus forte du groupe (+1,36/rép).
+
+---
+
+### Groupe D — Gagnant : BO Firminy - Saint Bonnet (77,4/100)
+
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **BO Firminy - St Bonnet** | 94 | 5 | 7 | 0 | **2** | 14 | +1,50 | → | 7 | 8 | 1 | **1** | 17 | +2,94 | +1,44 | **77,4** |
+| BO Rillieux | 146 | 6 | 7 | 2 | 1 | 16 | +2,50 | → | 9 | 11 | 1 | 1 | 22 | +3,23 | +0,73 | 74,9 |
+| BO Vénissieux | 131 | 6 | 8 | 0 | 2 | 16 | +1,88 | → | 8 | 9 | 2 | 1 | 20 | +2,90 | +1,02 | 59,4 |
+| BO Oullins | 177 | 8 | 11 | 1 | 3 | 23 | +1,52 | → | 10 | 13 | 2 | 2 | 27 | +2,48 | +0,96 | 24,6 |
+| BO Saint Étienne | 193 | 9 | 11 | 1 | 2 | 23 | +2,43 | → | 11 | 13 | 1 | 2 | 27 | +2,74 | +0,31 | 21,8 |
+| BO Givors | 183 | 9 | 11 | 0 | 3 | 23 | +1,83 | → | 10 | 12 | 2 | 2 | 26 | +2,46 | +0,64 | 11,7 |
+
+> Total points : +224 → +384 (Δ +160) | PDTS : 13 → 9
+
+**Pourquoi Firminy gagne** : avec seulement 14→17 répondants, elle réduit ses PDTS de 2→1 (+15 pts bruts sur un petit volume = impact massif). Progression record : +1,44 pt/rép.
 
 ---
 
 ### Podium des gagnants
 
-| Groupe | Gagnant | Score Challenge | Score Satisfaction | PDTS | Taux Répondants |
+| Groupe | Gagnant | Score Challenge | Moy/rép Avant → Après | 4/4 | 1/4 |
 |---|---|---|---|---|---|
-| **A** | **BO Valréas** | **97,1 pts** | 83,3% → 95,3% | 1 → 0 | 16,8% → 19,8% |
-| **B** | **BO Annonay** | **89,3 pts** | 88,1% → 98,0% | 1 → 0 | 12,9% → 15,4% |
-| **C** | **BO Heyrieux** | **88,3 pts** | 78,6% → 89,2% | 3 → 1 | 16,9% → 18,9% |
-| **D** | **BO Firminy - St Bonnet** | **82,1 pts** | 74,4% → 87,8% | 2 → 1 | 15,2% → 17,7% |
+| **A** | **BO Valréas** | **65,6/100** | +2,94 → +4,21 | 7→9 | 1→0 |
+| **B** | **BO Roussillon** | **91,2/100** | +3,74 → +4,29 | 14→16 | 1→0 |
+| **C** | **BO Heyrieux** | **84,5/100** | +2,39 → +3,74 | 13→16 | 3→1 |
+| **D** | **BO Firminy - St Bonnet** | **77,4/100** | +1,50 → +2,94 | 5→7 | 2→1 |
 
 ### Impact global de la simulation
 
-| Indicateur | Avant Challenge | Après Challenge | Progression |
+| Indicateur | Avant | Après | Progression |
 |---|---|---|---|
-| Score moyen (25 BOs) | **81,8 %** | **90,2 %** | **+8,4 %** |
-| PDTS total /2 mois | 44 | 25 | **-43 %** |
-| Taux répondants moyen | 14,3 % | 16,7 % | **+2,4 pts** |
+| Total points (25 BOs) | **+1 872** | **+2 583** | **+711 pts (+38%)** |
+| Score moyen /répondant | **+2,84** | **+3,54** | **+0,70 pt/rép** |
+| Total PDTS /2 mois | 44 | 25 | **-19 (-43%)** |
+| Total répondants /2 mois | 595 | 682 | **+87 (+15%)** |
 
 ### Ce que montre la simulation
 
-1. **Le volume compte** : les BOs à petit volume (Valréas 95 enq., Firminy 94 enq.) voient leur score exploser quand elles réduisent ne serait-ce qu'1 PDTS, car chaque répondant pèse lourd
-2. **Le scoring est bien équitable** : les gagnants ne sont pas forcément les BOs avec le meilleur score final, mais celles qui progressent le plus
-3. **L'effet combiné est puissant** : réduire les PDTS ET augmenter les répondants crée un double levier sur le score de satisfaction
-4. **Les BOs à gros volume (Forez, Roannais, Bourg)** doivent réduire proportionnellement plus de PDTS pour progresser autant, ce qui reflète la réalité
+1. **Le système de points rend visible le coût des PDTS** : un 1/4 à -15 pts équivaut à perdre 2,5 réponses 4/4. Réduire les PDTS est le levier n°1.
+2. **Le score moyen /répondant normalise les volumes** : Valréas (16 rép.) et Forez (41 rép.) sont comparées équitablement sur un même indicateur.
+3. **Les courses sont serrées** : dans le Groupe B, Roussillon bat Annonay de 4,4 pts seulement. Chaque réponse compte jusqu'au bout.
+4. **Le double levier PDTS + répondants est puissant** : Heyrieux passe de +2,39 à +3,74/rép en réduisant 2 PDTS et en gagnant 4 répondants positifs.
 
 ---
 
@@ -318,16 +326,16 @@ Simulation réaliste basée sur les volumes de chaque BO. Les hypothèses sont a
 
 | Fichier | Description |
 |---|---|
-| `analyse_groupes_bo.py` | Script Python d'analyse et de clustering |
-| `simulation_challenge.py` | Script Python de simulation avant/après avec scoring |
+| `analyse_groupes_bo.py` | Script Python d'analyse et de clustering (4 groupes) |
+| `simulation_challenge.py` | Script de simulation avec système de points par réponse |
 | `groupes_bo_comparables.csv` | Export CSV des groupes avec métriques mensuelles/bimestrielles |
-| `simulation_resultats.csv` | Export CSV complet de la simulation (avant/après/scoring) |
+| `simulation_resultats.csv` | Export CSV complet : notes 4/4 à 1/4, points, scores, classements |
 | `01_groupes_bo_scatter.png` | Carte des 4 groupes (Score vs Volume /2 mois) |
 | `02_scores_par_groupe.png` | Scores par BO au sein de chaque groupe |
 | `03_heatmap_groupes.png` | Profil moyen par groupe avec volumes /2 mois |
 | `04_analyse_detaillee.png` | 4 vues d'analyse croisée |
 | `05_systeme_scoring.png` | Récapitulatif visuel du système de score |
-| `06_simulation_avant_apres.png` | Score avant (pâle) vs après (foncé) par BO |
-| `07_decomposition_scoring.png` | Décomposition des points challenge par BO |
-| `08_vue_ensemble_simulation.png` | Trajectoires, PDTS et classement général |
-| `09_A/B/C/D_tableau_resultats.png` | Tableau de résultats détaillé par groupe |
+| `06_simulation_avant_apres.png` | Score moyen /répondant avant vs après par BO |
+| `07_decomposition_scoring.png` | Notes 4/4, 3/4, 2/4, 1/4 avant vs après par BO |
+| `08_vue_ensemble_simulation.png` | Impact des notes selon le volume + classement final |
+| `09_A/B/C/D_tableau_resultats.png` | Tableau complet de résultats par groupe |
