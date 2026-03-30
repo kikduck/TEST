@@ -137,9 +137,9 @@ Clustering K-Means sur 4 critères normalisés, avec les volumes annuels 2025 ra
 
 ---
 
-## Système de Points par Réponse
+## Règles du Challenge
 
-Chaque réponse d'enquête rapporte ou coûte des points à la BO :
+### Barème par réponse
 
 | Note | Points | Signification |
 |---|---|---|
@@ -148,33 +148,31 @@ Chaque réponse d'enquête rapporte ou coûte des points à la BO :
 | **2/4** (peu satisfait) | **-1 pt** | Léger malus — signal d'alerte |
 | **1/4** (insatisfait / PDTS) | **-15 pts** | Malus lourd — un détracteur coûte cher |
 
-### Score d'une BO = Total des points ÷ Nombre de répondants
+Un 1/4 coûte **15 pts** = l'équivalent de **2,5 réponses 4/4** ou **5 réponses 3/4**.
 
-Ce score moyen par répondant **normalise par le volume** : une BO avec 15 répondants est comparable à une BO avec 45 répondants.
+### Classement = Score moyen par répondant
 
-### Pourquoi ces valeurs ?
+**Score BO = Total des points ÷ Nombre de répondants**
 
-- **Un 1/4 coûte 15 pts**, soit l'équivalent de **2,5 réponses 4/4** ou **5 réponses 3/4**. Cela matérialise le coût réel d'un détracteur.
-- Le **2/4 est légèrement négatif** (-1 pt) pour inciter à le convertir en 3/4.
-- Le **ratio 4/4 vs 3/4** (6 vs 3) valorise les très satisfaits sans écraser les satisfaits.
+C'est simple, lisible, et ça normalise par le volume : une BO à 15 répondants est comparable à une BO à 45.
 
-### Classement du challenge
+**1 gagnant par groupe** = la BO avec le **meilleur score moyen /répondant** en fin de challenge.
 
-Le gagnant par groupe est déterminé par un **score challenge sur 100** combinant :
-- **60%** du score moyen /répondant atteint en fin de challenge (niveau final)
-- **40%** de la progression du score moyen /répondant (effort fourni)
+### Prix Effort (1 prix unique, tous groupes confondus)
 
-Cela récompense à la fois le résultat et la progression.
+La BO avec la **plus forte progression** du score moyen /répondant remporte le Prix Effort, quel que soit son groupe.
 
-### Exemple concret — Impact selon le volume
+Ce prix récompense l'effort fourni indépendamment du niveau de départ. Même une BO qui ne gagne pas son groupe peut remporter ce prix transversal.
 
-| Situation | 15 répondants | 30 répondants | 45 répondants |
-|---|---|---|---|
-| 1 PDTS de moins (1/4 → 3/4) | +1,20 pt/rép | +0,60 pt/rép | +0,40 pt/rép |
-| 1 répondant 4/4 de plus | +0,40 pt/rép | +0,20 pt/rép | +0,13 pt/rép |
-| 1 conversion 2/4 → 3/4 | +0,27 pt/rép | +0,13 pt/rép | +0,09 pt/rép |
+### 5 prix au total
 
-Les BOs à petit volume bénéficient mécaniquement d'un fort impact par action, ce qui est compensé par le fait qu'elles ont aussi moins de marge en volume absolu.
+| Prix | Critère |
+|---|---|
+| Gagnant Groupe A | Meilleur score moyen /répondant du groupe |
+| Gagnant Groupe B | Meilleur score moyen /répondant du groupe |
+| Gagnant Groupe C | Meilleur score moyen /répondant du groupe |
+| Gagnant Groupe D | Meilleur score moyen /répondant du groupe |
+| **Prix Effort** | **Meilleure progression tous groupes confondus** |
 
 ---
 
@@ -226,99 +224,111 @@ Simulation réaliste avec le **système de points par réponse**, basée sur les
 
 ---
 
-### Groupe A — Gagnant : BO Valréas (65,6/100)
+### Groupe A — ★ Gagnant : BO Oyonnax (+4,88 /rép)
 
-| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Rang |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Valréas** | 95 | 7 | 7 | 1 | **1** | 16 | +2,94 | → | 9 | 9 | 1 | **0** | 19 | +4,21 | +1,27 | **65,6** |
-| BO Oyonnax | 48 | 4 | 3 | 0 | 0 | 7 | +4,71 | → | 5 | 3 | 0 | 0 | 8 | +4,88 | +0,16 | 63,3 |
-| BO Saint Vallier | 136 | 11 | 9 | 1 | 1 | 22 | +3,50 | → | 12 | 11 | 1 | 0 | 24 | +4,33 | +0,83 | 57,2 |
-| BO Aubenas-Joyeuse | 188 | 17 | 13 | 1 | 1 | 32 | +3,91 | → | 19 | 15 | 2 | 0 | 36 | +4,36 | +0,45 | 46,2 |
-| BO Privas-Le Cheylard | 126 | 12 | 10 | 0 | 1 | 23 | +3,78 | → | 13 | 11 | 0 | 1 | 25 | +3,84 | +0,06 | 6,7 |
-| BO Crest Die | 154 | 12 | 10 | 1 | 1 | 24 | +3,58 | → | 14 | 12 | 1 | 1 | 28 | +3,71 | +0,13 | 2,3 |
+| **BO Oyonnax** | 48 | 4 | 3 | 0 | 0 | 7 | +4,71 | → | 5 | 3 | 0 | 0 | 8 | **+4,88** | +0,16 | **★ 1er** |
+| BO Aubenas-Joyeuse | 188 | 17 | 13 | 1 | 1 | 32 | +3,91 | → | 19 | 15 | 2 | 0 | 36 | +4,36 | +0,45 | 2e |
+| BO Saint Vallier | 136 | 11 | 9 | 1 | 1 | 22 | +3,50 | → | 12 | 11 | 1 | 0 | 24 | +4,33 | +0,83 | 3e |
+| BO Valréas | 95 | 7 | 7 | 1 | 1 | 16 | +2,94 | → | 9 | 9 | 1 | 0 | 19 | +4,21 | +1,27 | 4e |
+| BO Privas-Le Cheylard | 126 | 12 | 10 | 0 | 1 | 23 | +3,78 | → | 13 | 11 | 0 | 1 | 25 | +3,84 | +0,06 | 5e |
+| BO Crest Die | 154 | 12 | 10 | 1 | 1 | 24 | +3,58 | → | 14 | 12 | 1 | 1 | 28 | +3,71 | +0,13 | 6e |
 
-> Total points : +455 → +580 (Δ +125) | PDTS : 5 → 2
+> Moy. score /rép : +3,74 → +4,22 | PDTS : 5 → 2
 
-**Pourquoi Valréas gagne** : elle élimine son seul PDTS (économie de 15 pts) et gagne 3 répondants positifs sur un volume de seulement 16→19. L'impact par répondant est énorme (+1,27 pt/rép de progression).
+**Pourquoi Oyonnax gagne** : zéro PDTS et un score moyen déjà très élevé. Elle maintient l'excellence avec +4,88/rép, le plus haut du groupe.
 
 ---
 
-### Groupe B — Gagnant : BO Roussillon (91,2/100)
+### Groupe B — ★ Gagnant : BO Roussillon (+4,29 /rép)
 
-| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Rang |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Roussillon** | 205 | 14 | 11 | 1 | 1 | 27 | +3,74 | → | 16 | 13 | 2 | 0 | 31 | +4,29 | +0,55 | **91,2** |
-| BO Annonay | 141 | 9 | 8 | 0 | 1 | 18 | +3,50 | → | 11 | 9 | 2 | 0 | 22 | +4,14 | +0,64 | 86,8 |
-| BO Valence | 180 | 12 | 11 | 0 | 2 | 25 | +3,00 | → | 13 | 12 | 1 | 1 | 27 | +3,63 | +0,63 | 40,8 |
-| BO Ambérieu - Belley | 226 | 16 | 13 | 2 | 1 | 32 | +3,69 | → | 19 | 17 | 1 | 1 | 38 | +3,92 | +0,23 | 27,4 |
-| BO Décines | 164 | 10 | 9 | 2 | 1 | 22 | +3,18 | → | 13 | 13 | 1 | 1 | 28 | +3,61 | +0,43 | 19,5 |
+| **BO Roussillon** | 205 | 14 | 11 | 1 | 1 | 27 | +3,74 | → | 16 | 13 | 2 | 0 | 31 | **+4,29** | +0,55 | **★ 1er** |
+| BO Annonay | 141 | 9 | 8 | 0 | 1 | 18 | +3,50 | → | 11 | 9 | 2 | 0 | 22 | +4,14 | +0,64 | 2e |
+| BO Ambérieu - Belley | 226 | 16 | 13 | 2 | 1 | 32 | +3,69 | → | 19 | 17 | 1 | 1 | 38 | +3,92 | +0,23 | 3e |
+| BO Valence | 180 | 12 | 11 | 0 | 2 | 25 | +3,00 | → | 13 | 12 | 1 | 1 | 27 | +3,63 | +0,63 | 4e |
+| BO Décines | 164 | 10 | 9 | 2 | 1 | 22 | +3,18 | → | 13 | 13 | 1 | 1 | 28 | +3,61 | +0,43 | 5e |
 
-> Total points : +427 → +572 (Δ +145) | PDTS : 6 → 3
+> Moy. score /rép : +3,42 → +3,92 | PDTS : 6 → 3
 
-**Pourquoi Roussillon gagne** : elle combine le meilleur score final (+4,29/rép) et une bonne progression (+0,55). Elle élimine son PDTS et gagne 4 répondants positifs.
+**Pourquoi Roussillon gagne** : elle élimine son PDTS, gagne 4 répondants positifs et atteint le meilleur score du groupe (+4,29/rép).
 
 ---
 
-### Groupe C — Gagnant : BO Heyrieux (84,5/100)
+### Groupe C — ★ Gagnant : BO Forez (+3,96 /rép)
 
-| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Rang |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Heyrieux** | 184 | 13 | 14 | 1 | **3** | 31 | +2,39 | → | 16 | 17 | 1 | **1** | 35 | +3,74 | +1,36 | **84,5** |
-| BO Forez | 268 | 19 | 18 | 2 | 2 | 41 | +3,32 | → | 22 | 22 | 1 | 1 | 46 | +3,96 | +0,64 | 68,7 |
-| BO Montélimar | 208 | 15 | 14 | 2 | 2 | 33 | +3,03 | → | 16 | 17 | 1 | 1 | 35 | +3,74 | +0,71 | 56,2 |
-| BO Roannais | 235 | 20 | 18 | 0 | 3 | 41 | +3,15 | → | 22 | 19 | 1 | 2 | 44 | +3,59 | +0,44 | 33,9 |
-| BO Romans | 165 | 11 | 12 | 1 | 2 | 26 | +2,73 | → | 13 | 14 | 2 | 1 | 30 | +3,43 | +0,70 | 33,9 |
-| BO l'Arbresle | 188 | 12 | 13 | 1 | 2 | 28 | +2,86 | → | 12 | 14 | 2 | 1 | 29 | +3,34 | +0,49 | 18,4 |
-| BO Bourg - Montrevel | 248 | 15 | 16 | 0 | 3 | 34 | +2,74 | → | 18 | 18 | 2 | 2 | 40 | +3,25 | +0,51 | 12,9 |
-| BO Gleize | 221 | 14 | 15 | 1 | 3 | 33 | +2,52 | → | 16 | 17 | 2 | 2 | 37 | +3,11 | +0,59 | 6,5 |
+| **BO Forez** | 268 | 19 | 18 | 2 | 2 | 41 | +3,32 | → | 22 | 22 | 1 | 1 | 46 | **+3,96** | +0,64 | **★ 1er** |
+| BO Montélimar | 208 | 15 | 14 | 2 | 2 | 33 | +3,03 | → | 16 | 17 | 1 | 1 | 35 | +3,74 | +0,71 | 2e |
+| BO Heyrieux | 184 | 13 | 14 | 1 | **3** | 31 | +2,39 | → | 16 | 17 | 1 | **1** | 35 | +3,74 | +1,36 | 2e |
+| BO Roannais | 235 | 20 | 18 | 0 | 3 | 41 | +3,15 | → | 22 | 19 | 1 | 2 | 44 | +3,59 | +0,44 | 4e |
+| BO Romans | 165 | 11 | 12 | 1 | 2 | 26 | +2,73 | → | 13 | 14 | 2 | 1 | 30 | +3,43 | +0,70 | 5e |
+| BO l'Arbresle | 188 | 12 | 13 | 1 | 2 | 28 | +2,86 | → | 12 | 14 | 2 | 1 | 29 | +3,34 | +0,49 | 6e |
+| BO Bourg - Montrevel | 248 | 15 | 16 | 0 | 3 | 34 | +2,74 | → | 18 | 18 | 2 | 2 | 40 | +3,25 | +0,51 | 7e |
+| BO Gleize | 221 | 14 | 15 | 1 | 3 | 33 | +2,52 | → | 16 | 17 | 2 | 2 | 37 | +3,11 | +0,59 | 8e |
 
-> Total points : +766 → +1047 (Δ +281) | PDTS : 20 → 11
+> Moy. score /rép : +2,84 → +3,52 | PDTS : 20 → 11
 
-**Pourquoi Heyrieux gagne** : elle réduit ses PDTS de 3→1 (gain de 30 pts bruts, soit +0,86/rép rien que sur les PDTS) et gagne 4 répondants positifs. Progression la plus forte du groupe (+1,36/rép).
+**Pourquoi Forez gagne** : malgré un gros volume (46 rép.), elle réduit ses PDTS de 2→1, convertit des 2/4 en 3/4 et gagne 5 répondants positifs. Score final le plus haut du groupe.
+
+A noter : Heyrieux fait la meilleure progression du groupe (+1,36/rép) mais part de plus bas.
 
 ---
 
-### Groupe D — Gagnant : BO Firminy - Saint Bonnet (77,4/100)
+### Groupe D — ★ Gagnant : BO Rillieux (+3,23 /rép)
 
-| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Score |
+| BO | Enq /2m | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | → | 4/4 | 3/4 | 2/4 | 1/4 | Rép | Moy/rép | Δ Moy | Rang |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **BO Firminy - St Bonnet** | 94 | 5 | 7 | 0 | **2** | 14 | +1,50 | → | 7 | 8 | 1 | **1** | 17 | +2,94 | +1,44 | **77,4** |
-| BO Rillieux | 146 | 6 | 7 | 2 | 1 | 16 | +2,50 | → | 9 | 11 | 1 | 1 | 22 | +3,23 | +0,73 | 74,9 |
-| BO Vénissieux | 131 | 6 | 8 | 0 | 2 | 16 | +1,88 | → | 8 | 9 | 2 | 1 | 20 | +2,90 | +1,02 | 59,4 |
-| BO Oullins | 177 | 8 | 11 | 1 | 3 | 23 | +1,52 | → | 10 | 13 | 2 | 2 | 27 | +2,48 | +0,96 | 24,6 |
-| BO Saint Étienne | 193 | 9 | 11 | 1 | 2 | 23 | +2,43 | → | 11 | 13 | 1 | 2 | 27 | +2,74 | +0,31 | 21,8 |
-| BO Givors | 183 | 9 | 11 | 0 | 3 | 23 | +1,83 | → | 10 | 12 | 2 | 2 | 26 | +2,46 | +0,64 | 11,7 |
+| **BO Rillieux** | 146 | 6 | 7 | 2 | 1 | 16 | +2,50 | → | 9 | 11 | 1 | 1 | 22 | **+3,23** | +0,73 | **★ 1er** |
+| BO Firminy - St Bonnet | 94 | 5 | 7 | 0 | **2** | 14 | +1,50 | → | 7 | 8 | 1 | **1** | 17 | +2,94 | **+1,44** | 2e **PRIX EFFORT** |
+| BO Vénissieux | 131 | 6 | 8 | 0 | 2 | 16 | +1,88 | → | 8 | 9 | 2 | 1 | 20 | +2,90 | +1,02 | 3e |
+| BO Saint Étienne | 193 | 9 | 11 | 1 | 2 | 23 | +2,43 | → | 11 | 13 | 1 | 2 | 27 | +2,74 | +0,31 | 4e |
+| BO Oullins | 177 | 8 | 11 | 1 | 3 | 23 | +1,52 | → | 10 | 13 | 2 | 2 | 27 | +2,48 | +0,96 | 5e |
+| BO Givors | 183 | 9 | 11 | 0 | 3 | 23 | +1,83 | → | 10 | 12 | 2 | 2 | 26 | +2,46 | +0,64 | 6e |
 
-> Total points : +224 → +384 (Δ +160) | PDTS : 13 → 9
+> Moy. score /rép : +1,94 → +2,79 | PDTS : 13 → 9
 
-**Pourquoi Firminy gagne** : avec seulement 14→17 répondants, elle réduit ses PDTS de 2→1 (+15 pts bruts sur un petit volume = impact massif). Progression record : +1,44 pt/rép.
+**Pourquoi Rillieux gagne** : grâce à +6 répondants (la plus forte hausse du groupe en volume) et un bon ratio de 4/4, elle atteint le meilleur score final (+3,23/rép).
+
+**Pourquoi Firminy obtient le Prix Effort** : avec seulement 14→17 répondants, elle réduit ses PDTS de 2→1 (+15 pts bruts sur un petit volume). Progression record de toutes les BOs : +1,44 pt/rép.
 
 ---
 
-### Podium des gagnants
+### Podium — 5 prix
 
-| Groupe | Gagnant | Score Challenge | Moy/rép Avant → Après | 4/4 | 1/4 |
-|---|---|---|---|---|---|
-| **A** | **BO Valréas** | **65,6/100** | +2,94 → +4,21 | 7→9 | 1→0 |
-| **B** | **BO Roussillon** | **91,2/100** | +3,74 → +4,29 | 14→16 | 1→0 |
-| **C** | **BO Heyrieux** | **84,5/100** | +2,39 → +3,74 | 13→16 | 3→1 |
-| **D** | **BO Firminy - St Bonnet** | **77,4/100** | +1,50 → +2,94 | 5→7 | 2→1 |
+| Prix | Gagnant | Score /rép | Progression |
+|---|---|---|---|
+| ★ Groupe A | **BO Oyonnax** | **+4,88** | +0,16 |
+| ★ Groupe B | **BO Roussillon** | **+4,29** | +0,55 |
+| ★ Groupe C | **BO Forez** | **+3,96** | +0,64 |
+| ★ Groupe D | **BO Rillieux** | **+3,23** | +0,73 |
+| **PRIX EFFORT** | **BO Firminy - St Bonnet** | +2,94 | **+1,44** |
+
+### Top 3 progression (Prix Effort)
+
+| Rang | BO | Groupe | Progression |
+|---|---|---|---|
+| 1 | **BO Firminy - St Bonnet** | D | **+1,44 /rép** |
+| 2 | BO Heyrieux | C | +1,36 /rép |
+| 3 | BO Valréas | A | +1,27 /rép |
 
 ### Impact global de la simulation
 
 | Indicateur | Avant | Après | Progression |
 |---|---|---|---|
-| Total points (25 BOs) | **+1 872** | **+2 583** | **+711 pts (+38%)** |
 | Score moyen /répondant | **+2,84** | **+3,54** | **+0,70 pt/rép** |
 | Total PDTS /2 mois | 44 | 25 | **-19 (-43%)** |
 | Total répondants /2 mois | 595 | 682 | **+87 (+15%)** |
 
 ### Ce que montre la simulation
 
-1. **Le système de points rend visible le coût des PDTS** : un 1/4 à -15 pts équivaut à perdre 2,5 réponses 4/4. Réduire les PDTS est le levier n°1.
-2. **Le score moyen /répondant normalise les volumes** : Valréas (16 rép.) et Forez (41 rép.) sont comparées équitablement sur un même indicateur.
-3. **Les courses sont serrées** : dans le Groupe B, Roussillon bat Annonay de 4,4 pts seulement. Chaque réponse compte jusqu'au bout.
-4. **Le double levier PDTS + répondants est puissant** : Heyrieux passe de +2,39 à +3,74/rép en réduisant 2 PDTS et en gagnant 4 répondants positifs.
+1. **Le classement par score moyen est simple et lisible** : tout le monde comprend "plus ton score est haut, mieux c'est". Pas de formule complexe.
+2. **Le Prix Effort motive les BOs en retard** : Firminy ne gagne pas son groupe (2e derrière Rillieux) mais remporte le prix transversal grâce à sa progression record.
+3. **Chaque PDTS éliminé est visible** : un 1/4 en moins = +15 pts dans le total. Sur 17 répondants, ça fait +0,88 pt/rép d'un coup.
+4. **Les gros volumes gagnent dans leur groupe** : Forez (46 rép.) et Roussillon (31 rép.) gagnent par la régularité. Les petits volumes brillent sur la progression.
 
 ---
 
