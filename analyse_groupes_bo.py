@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans, AgglomerativeClustering
 from sklearn.metrics import silhouette_score
@@ -60,6 +61,41 @@ data = {
 }
 
 df = pd.DataFrame(data)
+
+# Remplacement des volumes annuels par la moyenne mobile journalière (si CSV disponible)
+volume_csv_candidates = [
+    Path('/workspace/Nombre_d_enqu_tes_envoy_es_en_moyenne_par_jour_par_BO.csv'),
+    Path('/workspace/data/Nombre_d_enqu_tes_envoy_es_en_moyenne_par_jour_par_BO.csv'),
+    Path('/home/ubuntu/.cursor/projects/workspace/uploads/Nombre_d_enqu_tes_envoy_es_en_moyenne_par_jour_par_BO.csv'),
+]
+volume_csv_path = next((p for p in volume_csv_candidates if p.exists()), None)
+
+if volume_csv_path is not None:
+    mm_df = pd.read_csv(volume_csv_path)
+    daily_col = "Nombre d'enquêtes envoyées MM"
+    bo_col = 'Base opérationnelle'
+
+    if bo_col not in mm_df.columns or daily_col not in mm_df.columns:
+        raise ValueError(
+            f"Colonnes attendues absentes dans {volume_csv_path}: {bo_col}, {daily_col}"
+        )
+
+    mean_daily = mm_df.groupby(bo_col)[daily_col].mean()
+    annualized = (mean_daily * 365).round().astype(int)
+
+    missing = set(df['Base opérationnelle']) - set(annualized.index)
+    if missing:
+        raise ValueError(
+            "BO manquantes dans le CSV de moyenne mobile: " + ", ".join(sorted(missing))
+        )
+
+    df['Nombre enquêtes envoyées MM / jour'] = df['Base opérationnelle'].map(mean_daily).round(2)
+    df['Nombre enquêtes envoyées'] = (
+        df['Base opérationnelle'].map(annualized).astype(int)
+    )
+    print(f"Volumes d'enquêtes chargés depuis la moyenne mobile: {volume_csv_path}")
+else:
+    print("⚠️ CSV de moyenne mobile non trouvé. Volumes annuels historiques conservés.")
 
 # Volumes estimés pour le challenge
 df['Nombre répondants estimé annuel'] = (df['Nombre enquêtes envoyées'] * df['Taux répondants cumulé'] / 100).round(0).astype(int)

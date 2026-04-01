@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -52,6 +53,42 @@ df = pd.DataFrame(data)
 
 group_labels = {1: "Groupe A", 2: "Groupe B", 3: "Groupe C", 4: "Groupe D"}
 colors_4 = ['#2196F3', '#4CAF50', '#FF9800', '#E91E63']
+
+# Priorité aux groupes/volumes recalculés (export de analyse_groupes_bo.py)
+groupes_csv_path = Path('/workspace/groupes_bo_comparables.csv')
+if groupes_csv_path.exists():
+    groupes_df = pd.read_csv(groupes_csv_path, sep=';').rename(
+        columns={'Base opérationnelle': 'BO'}
+    )
+    required_cols = {
+        'BO',
+        'Groupe',
+        'Nouveau Score Satisfaction',
+        'est_PDTS',
+        'Nombre enquêtes envoyées',
+        'Taux répondants cumulé',
+    }
+    missing_cols = required_cols - set(groupes_df.columns)
+    if missing_cols:
+        raise ValueError(
+            f"Colonnes manquantes dans {groupes_csv_path}: {', '.join(sorted(missing_cols))}"
+        )
+
+    groups_indexed = groupes_df.set_index('BO')
+    missing_bos = set(df['BO']) - set(groups_indexed.index)
+    if missing_bos:
+        raise ValueError(
+            "BO absentes de groupes_bo_comparables.csv: " + ", ".join(sorted(missing_bos))
+        )
+
+    df['Score_ini'] = df['BO'].map(groups_indexed['Nouveau Score Satisfaction']).astype(float)
+    df['est_PDTS_annuel'] = df['BO'].map(groups_indexed['est_PDTS']).astype(int)
+    df['Enquetes_annuel'] = df['BO'].map(groups_indexed['Nombre enquêtes envoyées']).astype(int)
+    df['Tx_rep_ini'] = df['BO'].map(groups_indexed['Taux répondants cumulé']).astype(float)
+    df['Groupe'] = df['BO'].map(groups_indexed['Groupe']).astype(int)
+    print(f"Données simulation synchronisées depuis: {groupes_csv_path}")
+else:
+    print("⚠️ groupes_bo_comparables.csv introuvable: utilisation des données statiques.")
 
 # =============================================================================
 # SYSTÈME DE POINTS PAR RÉPONSE
