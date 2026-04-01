@@ -14,6 +14,7 @@ np.random.seed(42)
 GROUPING_MODE = os.getenv("GROUPING_MODE", "kmeans").strip().lower()
 if GROUPING_MODE not in {"kmeans", "manuel"}:
     raise ValueError("GROUPING_MODE doit valoir 'kmeans' ou 'manuel'")
+STATS_FILE = os.getenv("STATS_FILE", "").strip()
 
 group_labels = {1: "Groupe A", 2: "Groupe B", 3: "Groupe C", 4: "Groupe D"}
 colors_4 = ["#2196F3", "#4CAF50", "#FF9800", "#E91E63"]
@@ -32,11 +33,17 @@ def parse_fr_number(series: pd.Series) -> pd.Series:
 
 
 def load_stats() -> pd.DataFrame:
-    candidates = [
-        Path("/workspace/stats_janvier_mars_2026.csv"),
-        Path("/workspace/data/stats_janvier_mars_2026.csv"),
-        Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_janvier_mars_2026.csv"),
-    ]
+    if STATS_FILE:
+        candidates = [Path(STATS_FILE)]
+    else:
+        candidates = [
+            Path("/workspace/stats_octobre_2025_mars_2026.csv"),
+            Path("/workspace/data/stats_octobre_2025_mars_2026.csv"),
+            Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_octobre_2025_mars_2026.csv"),
+            Path("/workspace/stats_janvier_mars_2026.csv"),
+            Path("/workspace/data/stats_janvier_mars_2026.csv"),
+            Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_janvier_mars_2026.csv"),
+        ]
     stats_path = next((p for p in candidates if p.exists()), None)
     if stats_path is None:
         raise FileNotFoundError("stats_janvier_mars_2026.csv introuvable")

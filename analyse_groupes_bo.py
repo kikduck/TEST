@@ -32,12 +32,17 @@ def parse_fr_number(series: pd.Series) -> pd.Series:
 
 
 def load_stats_jan_mars() -> pd.DataFrame:
+    stats_env = os.getenv("STATS_FILE", "").strip()
     candidates = [
+        Path(stats_env) if stats_env else None,
+        Path("/workspace/stats_octobre_2025_mars_2026.csv"),
+        Path("/workspace/data/stats_octobre_2025_mars_2026.csv"),
+        Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_octobre_2025_mars_2026.csv"),
         Path("/workspace/stats_janvier_mars_2026.csv"),
         Path("/workspace/data/stats_janvier_mars_2026.csv"),
         Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_janvier_mars_2026.csv"),
     ]
-    stats_path = next((p for p in candidates if p.exists()), None)
+    stats_path = next((p for p in candidates if p is not None and p.exists()), None)
     if stats_path is None:
         raise FileNotFoundError("stats_janvier_mars_2026.csv introuvable")
 

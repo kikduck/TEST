@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -20,11 +21,17 @@ def parse_fr_number(series: pd.Series) -> pd.Series:
     )
 
 
-stats_candidates = [
-    Path("/workspace/stats_janvier_mars_2026.csv"),
-    Path("/workspace/data/stats_janvier_mars_2026.csv"),
-    Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_janvier_mars_2026.csv"),
-]
+stats_env = os.getenv("STATS_FILE", "").strip()
+stats_candidates = []
+if stats_env:
+    stats_candidates.append(Path(stats_env))
+stats_candidates.extend(
+    [
+        Path("/workspace/stats_janvier_mars_2026.csv"),
+        Path("/workspace/data/stats_janvier_mars_2026.csv"),
+        Path("/home/ubuntu/.cursor/projects/workspace/uploads/stats_janvier_mars_2026.csv"),
+    ]
+)
 stats_path = next((p for p in stats_candidates if p.exists()), None)
 if stats_path is None:
     raise FileNotFoundError("Impossible de trouver stats_janvier_mars_2026.csv")
