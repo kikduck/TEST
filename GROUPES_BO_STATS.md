@@ -3,6 +3,7 @@
 - Mode de regroupement: **kmeans**
 - Méthode: **K-Means**
 - Source: `groupes_bo_comparables.csv`
+- Périmètre temporel source stats: **octobre 2025 à mars 2026**
 
 ## Synthèse par groupe
 
